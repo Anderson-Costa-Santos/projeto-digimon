@@ -1,0 +1,282 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+
+    background-image: url(../imagensDigimon/fundoInfo.jpeg);
+}
+
+
+main {
+    min-height: 100vh;
+    background-image: url(../imagensDigimon/fundo.jpg);
+    background-size: 100%;
+    background: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    gap: 30px;
+    padding: 30px 0;
+
+
+}
+
+/*Digimons*/
+
+.cardDigimon {
+    display: none;
+
+
+}
+
+.cardDigimon .cardCima {
+
+    padding: 30px 40px 0;
+    background-image: url(../imagensDigimon/digimonFundo.jpeg);
+    border-color: rgb(84, 181, 211);
+    border-style: solid;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+
+
+}
+
+.cardDigimon .cardCima .cardName {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.cardDigimon .cardImage {
+
+
+    max-width: 350px;
+    max-height: 260px;
+
+
+}
+
+.cardDigimon .cardImage img {
+
+    max-width: 100%;
+    padding-left: 50px;
+    max-width: 360px;
+    max-height: 250px;
+    margin-left: 10px;
+
+
+
+}
+
+
+/*Digimon Informações*/
+
+
+
+.cardDigimon .cardInfo {
+
+    display: flex;
+    justify-content: space-between;
+    background-image: url(../imagensDigimon/fundoInfo.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 80px 30px 50px;
+    margin-top: -70px;
+    border-style: solid;
+    border-color: rgb(84, 181, 211);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    color: white;
+
+
+}
+
+.cardDigimon .cardInfo h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    border: 2px solid rgb(36, 246, 17);
+
+    padding: 5px;
+}
+
+
+.cardDigimon .cardInfo .ataques,
+.cardDigimon .cardInfo .evolucoes {
+    padding: 0 10px;
+    width: 180px;
+
+}
+
+.cardDigimon .cardInfo .ataques ul li,
+.cardDigimon .cardInfo .evolucoes ul li {
+
+    border: 2px solid rgb(36, 246, 17);
+
+    padding: 3px;
+    margin-bottom: 10px;
+
+}
+
+.cardDigimon.open {
+    display: block;
+
+}
+
+
+/*Digi escolhidos*/
+
+.digeEscolhidos {
+
+    max-width: 200px;
+
+}
+
+.digeEscolhidos .escolhido img {
+
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding: 5px;
+
+
+
+}
+
+.digeEscolhidos .escolhido {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    background-image: url(../imagensDigimon/fundoPersonagem.jpeg);
+    background-size: cover;
+    padding: 0 5px;
+    border-radius: 5px;
+    border-style: dashed;
+    border-style: solid;
+    border-color: white;
+    cursor: pointer;
+    transition: 0.15s ease-in-out;
+    min-height: 65px;
+    width: 200px;
+
+
+}
+
+.digeEscolhidos .escolhido span {
+
+    padding-right: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+.digeEscolhidos .escolhido:hover {
+
+    transform: scale(1.10);
+
+}
+
+.digeEscolhidos .escolhido.ativo {
+
+    border-color: rgb(5, 250, 9);
+
+}
+
+
+@media (max-width: 750px) {
+    body {
+        font-size: 12px;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 30px 0;
+    }
+
+    .cards {
+        max-width: 300px;
+    }
+
+    .cards .cardImage {
+        width: 200px;
+        height: 200px;
+    }
+
+    .cards .cardInfo {
+        padding: 60px 10px 30px;
+        margin-top: -50px;
+    }
+
+
+    .cards .cardInfo h3 {
+        font-size: 16px;
+    }
+
+    .digeEscolhidos {
+        max-width: 300px;
+    }
+
+    .digeEscolhidos ul {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .digeEscolhidos .escolhido {
+        width: 140px;
+        border-radius: 8px;
+        margin-bottom: 0;
+    }
+
+    .digeEscolhidos .escolhido span {
+        padding-right: 5px;
+    }
+
+    .cardDigimon .cardInfo .ataques ul li,
+    .cardDigimon .cardInfo .evolucoes ul li {
+        font-size: 12px;
+    }
+
+    .cardDigimon .cardImage {
+
+
+        max-width: 250px;
+        max-height: 250px;
+
+    }
+
+    .cardDigimon .cardImage img {
+
+        max-width: 100%;
+        padding-left: 50px;
+        max-width: 200px;
+        max-height: 200px;
+        margin-left: 10px;
+
+
+
+    }
+
+
+
+
+}
